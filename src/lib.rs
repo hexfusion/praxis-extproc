@@ -14,6 +14,7 @@
 
 pub mod adapter;
 pub mod config;
+pub mod crypto;
 pub mod error;
 pub mod health;
 pub mod metrics;

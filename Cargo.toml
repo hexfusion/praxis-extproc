@@ -48,11 +48,13 @@ tonic = { version = "0.14.6", features = ["transport"] }
 tonic-health = "0.14.6"
 tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.23", features = ["env-filter", "json"] }
+rustls-openssl = { version = "0.4.1", default-features = false, features = ["tls12"] }
 
 
 [dev-dependencies]
 metrics-util = { version = "0.19", default-features = false, features = ["debugging"] }
 reqwest = { version = "0.12.28", default-features = false, features = ["native-tls", "json"] }
+rustls = { version = "0.23.45", default-features = false, features = ["std"] }
 serde_json = "1.0.151"
 tokio = { version = "1.52.2", features = ["macros", "rt-multi-thread", "test-util"] }
 

@@ -2685,6 +2685,8 @@ dependencies = [
  "prost",
  "rcgen",
  "reqwest 0.12.28",
+ "rustls",
+ "rustls-openssl",
  "serde",
  "serde_json",
  "thiserror 2.0.20",
@@ -3564,6 +3566,20 @@ dependencies = [
  "rustls-pki-types",
  "schannel",
  "security-framework 3.7.0",
+]
+
+[[package]]
+name = "rustls-openssl"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d67ff7ccc9938b2b7cee4ccc7efd33da2afe904ab7bd644f008defb259f288a2"
+dependencies = [
+ "foreign-types",
+ "once_cell",
+ "openssl",
+ "openssl-sys",
+ "rustls",
+ "zeroize",
 ]
 
 [[package]]

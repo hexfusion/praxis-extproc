@@ -58,6 +58,12 @@ async fn main() {
     init_tracing();
     let cli = Cli::parse();
 
+    if let Err(e) = praxis_extproc::crypto::install_default_provider() {
+        error!(error = %e, "fatal");
+        process::exit(1);
+    }
+    info!("outbound TLS uses the system OpenSSL crypto provider");
+
     if let Err(e) = Box::pin(run(cli)).await {
         error!(error = %e, "fatal");
         process::exit(1);
